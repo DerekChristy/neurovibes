@@ -1,0 +1,99 @@
+  
+  <%- include('../partials/head'); -%>
+ 
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">POSITIVE WAVES <img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faqs">FAQs</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/services#mental">Mental Disorders</a>
+                <a class="dropdown-item" href="/services#anxiety">Anxiety Disorders</a>
+                <a class="dropdown-item" href="/services#ashd">ADHD</a>
+                <a class="dropdown-item" href="/services#addiction">Addiction</a>
+                <a class="dropdown-item" href="/services#phobias">Phobias</a>
+                <a class="dropdown-item" href="/services#health">Health</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Show All</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://en.wikipedia.org/wiki/Neuro-linguistic_programming" target="_blank">What is NLP?</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+          -->
+        </ul>
+        <div class="my-2 my-lg-0">
+          <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">9372412366</span>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="5000">
+          <img src="/images/1.jpeg" class="d-block w-100" alt="...">
+          <!-- Caption
+          <div class="carousel-caption d-none d-md-block bg-dark">
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+          -->
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img src="/images/2.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-interval="5000">
+          <img src="/images/3.jpeg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="blockquote my-2 px-3 text-center">
+          <p class="mb-0">Your willingness to become better automatically helps you to heal and face your challenges.<br>
+            <strong>We show you the path, walking on it depends on you!</strong> </p>
+            <footer class="blockquote-footer"><cite title="Source Title">Radhika Kuddyady</cite></footer>
+          </div>      
+    </div>
+    
+    <%- include('../partials/scripts'); -%>
+  </body>
+</html>

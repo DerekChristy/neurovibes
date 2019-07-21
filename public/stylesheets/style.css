@@ -1,0 +1,29 @@
+.carousel-item{
+  height: 78vh;
+} 
+.carousel-item img{
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 78vh;
+}
+
+.profile-img {
+  display: inline-block;
+  width: 80px;
+  max-height: 40vh; 
+}
+
+/*### Smartphones (portrait and landscape)(small)### */
+@media screen and (min-width : 0px) and (max-width : 767px){
+  .carousel-item{
+    height: 40vh;
+  } 
+  .carousel-item img{
+    min-height: 40vh;
+  }
+  .profile-img {
+    display: inline-block;
+    height: 30vh;
+  }
+}
