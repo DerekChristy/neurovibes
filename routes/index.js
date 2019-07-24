@@ -42,19 +42,7 @@ router.get('/services', (req, res) => {
 
 router.post('/feedback', (req, res) => {
   console.log(req.body)
-  var mailOptions = {
-    from: 'neurowaves.feedback@gmail.com',
-    to: 'kered.christy@gmail.com',
-    subject: 'Sending Email using Node.js',
-    text: req.body
-  };
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  })
+  
 
   res.redirect('/');
 })
