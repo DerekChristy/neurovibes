@@ -1,3 +1,17 @@
+label {
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="radio"]:checked {
+  visibility: visible;
+  margin-left: 2px;
+}
+
 .carousel-item{
   height: 78vh;
 } 
@@ -13,6 +27,8 @@
   width: 80px;
   max-height: 40vh; 
 }
+
+
 
 /*### Smartphones (portrait and landscape)(small)### */
 @media screen and (min-width : 0px) and (max-width : 767px){

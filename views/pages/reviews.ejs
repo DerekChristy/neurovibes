@@ -16,13 +16,13 @@
               <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/reviews">Reviews</a>
+              <a class="nav-link" href="/reviews">Feedback</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/faqs">FAQs</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,6 +50,65 @@
           </div>
         </div>
       </nav>
-    <h1><%= title %></h1>
+    
+      <div class="col mx-auto text-center">
+        <form action="/feedback" method="post">
+          <p class="h7 py-4">We would like your feedback to improve our services.</p>
+          <div class="form-group">
+            <p class="h5 py-1">How was your overall experience?</p>
+            
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="ckboxBad"><i class="border border-success bg-warning rounded-circle far fa-angry fa-3x"></i></label>
+              <input class="form-check-input" type="radio" id="ckboxBad" value="bad" name="overall">
+            </div>
+
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="ckboxPoor"><i class="border border-success bg-warning rounded-circle far fa-frown fa-3x"></i></label>
+              <input class="form-check-input" type="radio" id="ckboxPoor" value="poor" name="overall">
+            </div>
+            
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="ckboxNeutral"><i class="border border-success bg-warning rounded-circle far fa-meh fa-3x"></i></label>
+              <input class="form-check-input" type="radio" id="ckboxNeutral" value="neutral" name="overall">
+            </div>
+            
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="ckboxGood"><i class="border border-success bg-warning rounded-circle far fa-smile-beam fa-3x"></i></label>
+              <input class="form-check-input" type="radio" id="ckboxGood" value="good" name="overall">
+            </div>
+            
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="ckboxExcellent"><i class="border border-success bg-warning rounded-circle far fa-grin-beam fa-3x"></i></label>
+              <input class="form-check-input" type="radio" id="ckboxExcellent" value="excelent" name="overall" checked>
+            </div>
+          </div>
+
+          <div class="dropdown-divider"></div>
+
+          <div class="form-group">
+            <p class="h5 py-1">Please select your feedback category below:</p>
+            <div class="btn-group btn-group-toggle py-1" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="feedback-category" id="suggestion" value="suggestion" autocomplete="off" checked> Suggestion
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="feedback-category" id="complaint" value="complaint" autocomplete="off"> Complaint
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="feedback-category" id="appreciation" value="appreciation" autocomplete="off"> Appreciation
+                </label>
+              </div>
+          </div>
+
+          <div class="dropdown-divider"></div>
+
+          <div class="form-group">
+            <p class="h5 py-1">Please leave your feedback below:</p>
+            <textarea class="form-control" name="feedback-text" rows="4"></textarea>
+          </div>
+          <input type="submit" class="btn btn-success">
+        </form>
+      </div>
+
     <%- include('../partials/scripts'); -%>
 </body>
