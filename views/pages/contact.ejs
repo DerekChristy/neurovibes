@@ -1,8 +1,85 @@
 <%- include('../partials/head'); -%>
 
-<body>
-    <%- include('../partials/navbar'); -%>
-    <div class="display-1"><%=title %></div>
+<body style="background-image: url('images/bg.png'); height: 100vh; background-repeat: no-repeat; background-size: cover; @media (min-width: 992px) { background-image: url('images/bg-mob.jpg'); }">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/"><%= title %> <img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/feedback">Feedback</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Services
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/services#mental">Mental Disorders</a>
+                    <a class="dropdown-item" href="/services#anxiety">Anxiety Disorders</a>
+                    <a class="dropdown-item" href="/services#ashd">ADHD</a>
+                    <a class="dropdown-item" href="/services#addiction">Addiction</a>
+                    <a class="dropdown-item" href="/services#phobias">Phobias</a>
+                    <a class="dropdown-item" href="/services#health">Health</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/services">Show All</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://en.wikipedia.org/wiki/Neuro-linguistic_programming" target="_blank">What is NLP?</a>
+                  </li>
+                <!--
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                -->
+              </ul>
+              <div class="my-2 my-lg-0">
+                <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">(+91) 9372412366</span>
+              </div>
+            </div>
+          </nav>
+    
+    <div class="container text-center" >
+
+        <div class="display-4"><strong>One step</strong> away from experiencing a <strong>better</strong> life.</div>
+        
+        <div class="mt-5 col-12 col-lg-4 mx-auto">
+            
+            <div class="h4">Feel free to chat with me on:</div>
+            
+            <table class="mt-5 table table-hover text-light">
+            <tbody>
+                <tr class="bg-success">
+                    <td><i class="fab fa-whatsapp fa-3x"></i></td>
+                    <td><a class="nav-link text-light" href="tel:9372412366">(+91) 9372412366</a></td>
+                </tr>
+                <tr class="bg-info">
+                    <td><i class="fab fa-facebook fa-3x"></i></td>
+                    <td><a class="nav-link text-light" href="https://www.facebook.com/radhika.kuddyady" target="_blank">Facebook</a></td>
+                </tr>
+                <tr class="bg-danger">
+                    <td><i class="fab fa-instagram fa-3x"></i></td>
+                    <td><a class="nav-link text-light" href="https://www.instagram.com/radhikakuddyady/" target="_blank">Instagram</a></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <%- include('../partials/footer'); -%>s
     <%- include('../partials/scripts'); -%>
 </body>
+
 </html>

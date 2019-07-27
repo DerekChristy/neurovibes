@@ -2,7 +2,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">POSITIVE WAVES <img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
+        <a class="navbar-brand" href="/"><%= title %><img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,7 +16,10 @@
               <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/reviews">Feedback</a>
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/feedback">Feedback</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/faqs">FAQs</a>
@@ -46,7 +49,7 @@
             -->
           </ul>
           <div class="my-2 my-lg-0">
-            <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">9372412366</span>
+            <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">(+91) 9372412366</span>
           </div>
         </div>
       </nav>
@@ -59,6 +62,8 @@
     <h1 id="addiction">addiction</h1>
     <h1 id="phobias">phobias</h1>
     <h1 id="health">health</h1>
+
+    <%- include('../partials/footer'); -%>
     <%- include('../partials/scripts'); -%>
 </body>
 </html>
