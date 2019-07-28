@@ -3,6 +3,10 @@ label {
   outline: none;
 }
 
+body {
+  background-attachment: fixed;
+}
+
 input[type="radio"], input[type="checkbox"] {
   visibility: hidden;
 }
