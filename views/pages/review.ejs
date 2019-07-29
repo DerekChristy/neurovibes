@@ -1,0 +1,119 @@
+<%- include('../partials/head'); -%>
+<style>
+#c1:not(.collapsed):after {
+    content: '- Read Less';
+}
+#c1.collapsed:after  {
+    content: '+ Read More';
+}
+
+#c2:not(.collapsed):after {
+    content: '- Read Less';
+}
+#c2.collapsed:after  {
+    content: '+ Read More';
+}
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><%= title %><img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/feedback">Feedback</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/review">Reviews</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/about#mental">Mental Disorders</a>
+                <a class="dropdown-item" href="/about#anxiety">Anxiety Disorders</a>
+                <a class="dropdown-item" href="/about#ashd">ADHD</a>
+                <a class="dropdown-item" href="/about#addiction">Addiction</a>
+                <a class="dropdown-item" href="/about#phobias">Phobias</a>
+                <a class="dropdown-item" href="/about#health">Health</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/services">Show All</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://en.wikipedia.org/wiki/Neuro-linguistic_programming" target="_blank">What is NLP?</a>
+            </li>
+            <!--
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+            -->
+          </ul>
+          <div class="my-2 my-lg-0">
+            <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">(+91) 9372412366</span>
+          </div>
+        </div>
+  </nav>
+
+  <div class="container">
+    <p class="h5 my-2 p-1 col-12 col-lg-7 mx-auto">Experiences with my clients:</p>
+    <div class="card card-body my-2 col-12 col-lg-7 mx-auto">
+      <p>Client who is 13yrs old had come to me with her mother who was having problem in studies. 
+        She was diagnosed with ADHD, learning disability and slow learning. Her treatment was going on 
+        as usual and to treat with ADHD medicines were given to her through a well known hospital.
+        <div class="collapse" id="collapse-body1">
+          The child was undergoing medicines since years together and she had behavioural issues regarding 
+          her emotions and dealing with studies. Her aggressiveness and depression was at peak. She had short 
+          span focus and was hyper used to figit alot.
+          
+          Her mother was concerned that even though everything was taken care how come still she is finding difficulty in studies and not happy? 
+          As a child specialist and New Code NLP practitioner, 
+          I came to know she did not at all have ADHD problem at all. And the whole treatment was wrong. Her report was correct regarding learning disability but not ADHD.
+          I suggested to stop it abruptly as I will be healing about the withdrawal symptoms. 
+          Reality - A child was suffering emotionally from family problems. To attract attention to her. She was acting imitating An actor SRK frm my name is khan movie. As her actor is favorite. 
+          After few months of therapy, she is now confident focused and now studying all by herself and scoring good marks in her exams. 
+          Her whole personality has improved and positively responding in life.</p>
+        </div>
+        <a id="c1" class="btn btn-primary" href="#collapse-body1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-body1"></a> 
+    </div>
+       
+    <div class="card card-body my-2 col-12 col-lg-7 mx-auto">
+        <p>Client who is 62 years old came to me telling me he is in depression and decided to die.
+          He has prepared mentally to die. He had spent all his money on vices and on others and had become bankrupt. 
+          His whole family was very worried about him because earlier he had made a demo video of suicide because he lost hopes in life.
+          <div class="collapse" id="collapse-body2">
+              Slowly and gradually I started explaining him by understanding his state of mind and giving him the techniques based on his capacity 
+              to view life. My suggestions has helped him so much that in 3 to 4 sessions,  my client took charge of himself and had that willingness 
+              of wanting to live life. Through therapy he got the hope and discovered his purpose of life of what he wants to do in life. He started 
+              being himself and slowly started leaving those things which he felt it completely unacceptable which was once acceptable to him.  He took 
+              an appointment with me and said " Radhika, you did not tell me to leave my addictions but I myself left smoking and drinking alcohol. I am 
+              handling life better. Thanks for helping me realise my potential. Now I will not even dream to die. You have saved my life".
+              This was the clients response. 
+              His overall personality improved. And having a positive outlook in life.
+              "You completely transformed me".
+              He said.
+              Now he is happy and positive!</p>    
+          </div>
+          <a id="c2" class="btn btn-primary" href="#collapse-body2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse-body2"></a> 
+      </div>
+           
+  </div>
+
+  <%- include('../partials/footer'); -%>
+  <%- include('../partials/scripts'); -%>
+</body>
+</html>

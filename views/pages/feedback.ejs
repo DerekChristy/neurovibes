@@ -22,19 +22,19 @@
               <a class="nav-link" href="/feedback">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/faqs">FAQs</a>
+              <a class="nav-link" href="/review">Reviews</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Services
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/services#mental">Mental Disorders</a>
-                <a class="dropdown-item" href="/services#anxiety">Anxiety Disorders</a>
-                <a class="dropdown-item" href="/services#ashd">ADHD</a>
-                <a class="dropdown-item" href="/services#addiction">Addiction</a>
-                <a class="dropdown-item" href="/services#phobias">Phobias</a>
-                <a class="dropdown-item" href="/services#health">Health</a>
+                <a class="dropdown-item" href="/about#mental">Mental Disorders</a>
+                <a class="dropdown-item" href="/about#anxiety">Anxiety Disorders</a>
+                <a class="dropdown-item" href="/about#ashd">ADHD</a>
+                <a class="dropdown-item" href="/about#addiction">Addiction</a>
+                <a class="dropdown-item" href="/about#phobias">Phobias</a>
+                <a class="dropdown-item" href="/about#health">Health</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/services">Show All</a>
               </div>
@@ -60,28 +60,43 @@
           <div class="form-group">
             <p class="h5 py-1">How was your overall experience?</p>
             
-            <div class="form-check form-check-inline">
-              <label class="form-check-label" for="ckboxBad"><i class="border border-success bg-warning rounded-circle far fa-angry fa-3x"></i></label>
+            <div class="form-check form-check-inline m-1">
+              <label class="form-check-label" for="ckboxBad">
+                <i class="bg-warning rounded-circle far fa-angry fa-3x"></i>
+              <span class="p-1">Bad</span>
+            </label>
               <input class="form-check-input" type="radio" id="ckboxBad" value="bad" name="overall">
             </div>
 
-            <div class="form-check form-check-inline">
-              <label class="form-check-label" for="ckboxPoor"><i class="border border-success bg-warning rounded-circle far fa-frown fa-3x"></i></label>
+            <div class="form-check form-check-inline m-1">
+              <label class="form-check-label" for="ckboxPoor">
+                <i class="bg-warning rounded-circle far fa-frown fa-3x"></i>
+              <span class="p-1">Poor</span>
+            </label>
               <input class="form-check-input" type="radio" id="ckboxPoor" value="poor" name="overall">
             </div>
             
-            <div class="form-check form-check-inline">
-              <label class="form-check-label" for="ckboxNeutral"><i class="border border-success bg-warning rounded-circle far fa-meh fa-3x"></i></label>
+            <div class="form-check form-check-inline m-1">
+              <label class="form-check-label" for="ckboxNeutral">
+                <i class="bg-warning rounded-circle far fa-meh fa-3x"></i>
+                <span class="p-1">Fine</span>
+              </label>
               <input class="form-check-input" type="radio" id="ckboxNeutral" value="neutral" name="overall">
             </div>
             
-            <div class="form-check form-check-inline">
-              <label class="form-check-label" for="ckboxGood"><i class="border border-success bg-warning rounded-circle far fa-smile-beam fa-3x"></i></label>
+            <div class="form-check form-check-inline m-1">
+              <label class="form-check-label" for="ckboxGood">
+                <i class="bg-warning rounded-circle far fa-smile-beam fa-3x"></i>
+              <span class="p-1">Good</span>
+            </label>
               <input class="form-check-input" type="radio" id="ckboxGood" value="good" name="overall">
             </div>
             
-            <div class="form-check form-check-inline">
-              <label class="form-check-label" for="ckboxExcellent"><i class="border border-success bg-warning rounded-circle far fa-grin-beam fa-3x"></i></label>
+            <div class="form-check form-check-inline m-1">
+              <label class="form-check-label" for="ckboxExcellent">
+                <i class="bg-warning rounded-circle far fa-grin-beam fa-3x"></i>
+              <span class="p-1">Excelent</span>
+            </label>
               <input class="form-check-input" type="radio" id="ckboxExcellent" value="excelent" name="overall" checked>
             </div>
           </div>
@@ -92,13 +107,13 @@
             <p class="h5 py-1">Please select your feedback category below:</p>
             <div class="btn-group btn-group-toggle py-1" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                  <input type="radio" name="feedback-category" id="suggestion" value="suggestion" autocomplete="off" checked> Suggestion
+                  <input type="radio" name="category" id="suggestion" value="suggestion" autocomplete="off" checked> Suggestion
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="feedback-category" id="complaint" value="complaint" autocomplete="off"> Complaint
+                  <input type="radio" name="category" id="complaint" value="complaint" autocomplete="off"> Complaint
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="feedback-category" id="appreciation" value="appreciation" autocomplete="off"> Appreciation
+                  <input type="radio" name="category" id="appreciation" value="appreciation" autocomplete="off"> Appreciation
                 </label>
               </div>
           </div>
@@ -107,7 +122,7 @@
 
           <div class="form-group">
             <p class="h5 py-1">Please leave your feedback below:</p>
-            <textarea class="form-control" name="feedback-text" rows="4"></textarea>
+            <textarea class="form-control" name="feedbacktext" rows="4"></textarea>
           </div>
           <input type="submit" class="btn btn-success">
         </form>

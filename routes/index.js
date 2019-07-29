@@ -16,8 +16,8 @@ router.get('/feedback', (req, res) => {
   res.render('pages/feedback', { title: 'Neuro Vibes'})
 })
 
-router.get('/faqs', (req, res) => {
-  res.render('pages/faqs', { title: 'Neuro Vibes' })
+router.get('/review', (req, res) => {
+  res.render('pages/review', { title: 'Neuro Vibes' })
 })
 
 router.get('/contact', (req, res) => {
@@ -29,8 +29,9 @@ router.get('/services', (req, res) => {
 })
 
 router.post('/feedback', (req, res) => {
-  console.log(req.body)
-  async function sendEmail() {
+  
+  async function sendEmail(mail) {
+    
     const nodemailer = require("nodemailer");
     const { google } = require("googleapis");
     const OAuth2 = google.auth.OAuth2;
@@ -60,16 +61,19 @@ router.post('/feedback', (req, res) => {
     const mailOptions = {
       from: "neurowaves.feedback@gmail.com",
       to: "kered.christy@gmail.com,radhikakuddyady@gmail.com",
-      subject: "Node.js Email with Secure OAuth from positive waves",
-      generateTextFromHTML: true,
-      html: "<b>testjkjhk</b>"
+      subject: 'Neuro vibes feedback',
+      text: mail ,
     };
     smtpTransport.sendMail(mailOptions, (error, response) => {
       error ? console.log(error) : console.log(response);
       smtpTransport.close();
     });
-  } // That last brace is to close off our async function
-  sendEmail();
+  } 
+ 
+  var message = "Overall rating: " + req.body.overall + "\nFeedback type: " + req.body.category + "\nMessage: " + req.body.feedbacktext;
+  console.log(message)
+  
+  sendEmail(message);
   res.redirect('/')
 })
 
