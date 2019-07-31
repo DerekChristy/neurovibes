@@ -54,9 +54,9 @@
         </div>
       </nav>
       
-      <div class="col mx-auto text-center">
-        <form action="/feedback" method="post">
-          <p class="h7 py-4">We would like your feedback to improve our services.</p>
+      <div class="col my-2 mx-auto text-center">
+        <form id="myForm" class="form bg-light" action="/feedback" method="post">
+          <p class="h7 mx-2 py-4">We would like your feedback to improve our services.</p>
           <div class="form-group">
             <p class="h5 py-1">How was your overall experience?</p>
             
@@ -122,12 +122,27 @@
 
           <div class="form-group">
             <p class="h5 py-1">Please leave your feedback below:</p>
-            <textarea class="form-control" name="feedbacktext" rows="4"></textarea>
+            <textarea class="form-control col-10 col-lg-6 mx-auto" name="feedbacktext" rows="4"></textarea>
           </div>
-          <input type="submit" class="btn btn-success">
+          <input id="btnSubmit" type="submit" class="btn btn-success m-2">
         </form>
       </div>
-    
+      <script>
+          var btnSubmit = document.getElementById("btnSubmit");
+          var form = document.getElementById("myForm");
+          btnSubmit.onclick = function(e) {
+            e.preventDefault();
+            swal({
+              title: "Thankyou!",
+              text: "We have received your feedback.",
+              icon: "success",
+              button: "Ok",
+            }).then( (value) => {
+              form.submit();
+            })
+          }    
+        
+      </script>
       <%- include('../partials/footer'); -%>
     <%- include('../partials/scripts'); -%>
 </body>
