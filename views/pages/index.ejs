@@ -1,7 +1,7 @@
   
   <%- include('../partials/head'); -%>
  
-  <body>
+  <body style="background-image: url('images/bg.png'); height: 100vh; background-repeat: no-repeat; background-size: cover; @media (min-width: 992px) { background-image: url('images/bg-mob.jpg'); }">
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/"><%= title %><img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
@@ -90,14 +90,26 @@
     </div>
 
     <div class="container">
-      <div class="blockquote my-2 px-3 text-center">
-          <p class="mb-0">Your willingness to become better automatically helps you to heal and face your challenges.<br>
-            <div class="font-weight-bold my-3">We show you the path, walking on it depends on you!
-                <footer class="blockquote-footer font-weight-normal"><cite title="Source Title">Radhika Kuddyady</cite></footer>
+      <div class="card card-body blockquote my-2 px-3 text-center" style="background: rgba(255, 255, 255, 0.651);">
+          <p class="mb-0">Your willingness to become better automatically helps you to heal and face your challenges.
+            <br>
+            <div class="font-weight-bold my-3">
+              <span>We show you the path, walking on it depends on you!
+                <footer class="blockquote-footer font-weight-normal">
+                  <cite title="Source Title">Radhika Kuddyady</cite>
+                </footer>
+              </span>
             </div>
           </p>
-          </div>      
-    </div>
+      </div>
+
+      <div class="row m-3">
+          <a href="/contact" role="button" class="col-8 col-lg-3 mx-auto btn btn-lg btn-outline-light">Contact Now!</a>  
+        </div>
+    </div> 
+    
+    
+    
     <%- include('../partials/footer'); -%>
     <%- include('../partials/scripts'); -%>
   </body>
