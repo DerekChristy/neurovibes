@@ -1,0 +1,16 @@
+{
+    "name": "Neuro Vibes",
+    "description": "Radhika Kuddyady, New Code NLP Therapist",
+    "short_name": "NeuroVibes",
+    "display": "fullscreen",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "images/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#3367D6",
+    "theme_color": "#343a40"
+}
