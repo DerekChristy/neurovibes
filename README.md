@@ -2,4 +2,4 @@
 
 ## http://neurovibes.tk
 
-A website created using node and express \
+A website created using node and express
