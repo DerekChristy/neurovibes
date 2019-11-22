@@ -1,148 +1,236 @@
 <%- include('../partials/head'); -%>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/"><%= title %><img class="mx-2"src="/images/sound.png" width="40" height="40"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/feedback">Feedback</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/review">Reviews</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/about#mental">Mental Disorders</a>
-                <a class="dropdown-item" href="/about#anxiety">Anxiety Disorders</a>
-                <a class="dropdown-item" href="/about#ashd">ADHD</a>
-                <a class="dropdown-item" href="/about#addiction">Addiction</a>
-                <a class="dropdown-item" href="/about#phobias">Phobias</a>
-                <a class="dropdown-item" href="/about#health">Health</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/services">Show All</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://en.wikipedia.org/wiki/Neuro-linguistic_programming" target="_blank">What is NLP?</a>
-              </li>
-            <!--
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"
+      ><%= title %><img
+        class="mx-2"
+        src="/images/sound.png"
+        width="40"
+        height="40"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/feedback">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/review">Reviews</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="/about#services"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/about#mental">Mental Disorders</a>
+            <a class="dropdown-item" href="/about#anxiety">Anxiety Disorders</a>
+            <a class="dropdown-item" href="/about#ashd">ADHD</a>
+            <a class="dropdown-item" href="/about#addiction">Addiction</a>
+            <a class="dropdown-item" href="/about#phobias">Phobias</a>
+            <a class="dropdown-item" href="/about#health">Health</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about#services">Show All</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://en.wikipedia.org/wiki/Neuro-linguistic_programming"
+            target="_blank"
+            >What is NLP?</a
+          >
+        </li>
+        <!--
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
             -->
-          </ul>
-          <div class="my-2 my-lg-0">
-            <a class="btn btn-outline-warning" href="/contact" role="button">CONTACT US</a><span class="text-light px-3">(+91) 9372412366</span>
-          </div>
-        </div>
-      </nav>
-      
-      <div class="col my-2 mx-auto text-center">
-        <form id="myForm" class="form bg-light" action="/feedback" method="post">
-          <p class="h7 mx-2 py-4">We would like your feedback to improve our services.</p>
-          <div class="form-group">
-            <p class="h5 py-1">How was your overall experience?</p>
-            
-            <div class="form-check form-check-inline m-1">
-              <label class="form-check-label" for="ckboxBad">
-                <i class="bg-warning rounded-circle far fa-angry fa-3x"></i>
-              <span class="p-1">Bad</span>
-            </label>
-              <input class="form-check-input" type="radio" id="ckboxBad" value="bad" name="overall">
-            </div>
-
-            <div class="form-check form-check-inline m-1">
-              <label class="form-check-label" for="ckboxPoor">
-                <i class="bg-warning rounded-circle far fa-frown fa-3x"></i>
-              <span class="p-1">Poor</span>
-            </label>
-              <input class="form-check-input" type="radio" id="ckboxPoor" value="poor" name="overall">
-            </div>
-            
-            <div class="form-check form-check-inline m-1">
-              <label class="form-check-label" for="ckboxNeutral">
-                <i class="bg-warning rounded-circle far fa-meh fa-3x"></i>
-                <span class="p-1">Fine</span>
-              </label>
-              <input class="form-check-input" type="radio" id="ckboxNeutral" value="neutral" name="overall">
-            </div>
-            
-            <div class="form-check form-check-inline m-1">
-              <label class="form-check-label" for="ckboxGood">
-                <i class="bg-warning rounded-circle far fa-smile-beam fa-3x"></i>
-              <span class="p-1">Good</span>
-            </label>
-              <input class="form-check-input" type="radio" id="ckboxGood" value="good" name="overall">
-            </div>
-            
-            <div class="form-check form-check-inline m-1">
-              <label class="form-check-label" for="ckboxExcellent">
-                <i class="bg-warning rounded-circle far fa-grin-beam fa-3x"></i>
-              <span class="p-1">Excelent</span>
-            </label>
-              <input class="form-check-input" type="radio" id="ckboxExcellent" value="excelent" name="overall" checked>
-            </div>
-          </div>
-
-          <div class="dropdown-divider"></div>
-
-          <div class="form-group">
-            <p class="h5 py-1">Please select your feedback category below:</p>
-            <div class="btn-group btn-group-toggle py-1" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="category" id="suggestion" value="suggestion" autocomplete="off" checked> Suggestion
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="category" id="complaint" value="complaint" autocomplete="off"> Complaint
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="category" id="appreciation" value="appreciation" autocomplete="off"> Appreciation
-                </label>
-              </div>
-          </div>
-
-          <div class="dropdown-divider"></div>
-
-          <div class="form-group">
-            <p class="h5 py-1">Please leave your feedback below:</p>
-            <textarea class="form-control col-10 col-lg-6 mx-auto" name="feedbacktext" rows="4"></textarea>
-          </div>
-          <input id="btnSubmit" type="submit" class="btn btn-success m-2">
-        </form>
+      </ul>
+      <div class="my-2 my-lg-0">
+        <a class="btn btn-outline-warning" href="/contact" role="button"
+          >CONTACT US</a
+        ><span class="text-light px-3">(+91) 9372412366</span>
       </div>
-      <script>
-          var btnSubmit = document.getElementById("btnSubmit");
-          var form = document.getElementById("myForm");
-          btnSubmit.onclick = function(e) {
-            e.preventDefault();
-            swal({
-              title: "Thankyou!",
-              text: "We have received your feedback.",
-              icon: "success",
-              button: "Ok",
-            }).then( (value) => {
-              form.submit();
-            })
-          }    
-        
-      </script>
-      <%- include('../partials/footer'); -%>
-    <%- include('../partials/scripts'); -%>
+    </div>
+  </nav>
+
+  <div class="col my-2 mx-auto text-center">
+    <form id="myForm" class="form bg-light" action="/feedback" method="post">
+      <p class="h7 mx-2 py-4">
+        We would like your feedback to improve our services.
+      </p>
+      <div class="form-group">
+        <p class="h5 py-1">How was your overall experience?</p>
+
+        <div class="form-check form-check-inline m-1">
+          <label class="form-check-label" for="ckboxBad">
+            <i class="bg-warning rounded-circle far fa-angry fa-3x"></i>
+            <span class="p-1">Bad</span>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            id="ckboxBad"
+            value="bad"
+            name="overall"
+          />
+        </div>
+
+        <div class="form-check form-check-inline m-1">
+          <label class="form-check-label" for="ckboxPoor">
+            <i class="bg-warning rounded-circle far fa-frown fa-3x"></i>
+            <span class="p-1">Poor</span>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            id="ckboxPoor"
+            value="poor"
+            name="overall"
+          />
+        </div>
+
+        <div class="form-check form-check-inline m-1">
+          <label class="form-check-label" for="ckboxNeutral">
+            <i class="bg-warning rounded-circle far fa-meh fa-3x"></i>
+            <span class="p-1">Fine</span>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            id="ckboxNeutral"
+            value="neutral"
+            name="overall"
+          />
+        </div>
+
+        <div class="form-check form-check-inline m-1">
+          <label class="form-check-label" for="ckboxGood">
+            <i class="bg-warning rounded-circle far fa-smile-beam fa-3x"></i>
+            <span class="p-1">Good</span>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            id="ckboxGood"
+            value="good"
+            name="overall"
+          />
+        </div>
+
+        <div class="form-check form-check-inline m-1">
+          <label class="form-check-label" for="ckboxExcellent">
+            <i class="bg-warning rounded-circle far fa-grin-beam fa-3x"></i>
+            <span class="p-1">Excelent</span>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            id="ckboxExcellent"
+            value="excelent"
+            name="overall"
+            checked
+          />
+        </div>
+      </div>
+
+      <div class="dropdown-divider"></div>
+
+      <div class="form-group">
+        <p class="h5 py-1">Please select your feedback category below:</p>
+        <div class="btn-group btn-group-toggle py-1" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input
+              type="radio"
+              name="category"
+              id="suggestion"
+              value="suggestion"
+              autocomplete="off"
+              checked
+            />
+            Suggestion
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="category"
+              id="complaint"
+              value="complaint"
+              autocomplete="off"
+            />
+            Complaint
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="category"
+              id="appreciation"
+              value="appreciation"
+              autocomplete="off"
+            />
+            Appreciation
+          </label>
+        </div>
+      </div>
+
+      <div class="dropdown-divider"></div>
+
+      <div class="form-group">
+        <p class="h5 py-1">Please leave your feedback below:</p>
+        <textarea
+          class="form-control col-10 col-lg-6 mx-auto"
+          name="feedbacktext"
+          rows="4"
+        ></textarea>
+      </div>
+      <input id="btnSubmit" type="submit" class="btn btn-success m-2" />
+    </form>
+  </div>
+  <script>
+    var btnSubmit = document.getElementById('btnSubmit');
+    var form = document.getElementById('myForm');
+    btnSubmit.onclick = function(e) {
+      e.preventDefault();
+      swal({
+        title: 'Thankyou!',
+        text: 'We have received your feedback.',
+        icon: 'success',
+        button: 'Ok'
+      }).then(value => {
+        form.submit();
+      });
+    };
+  </script>
+  <%- include('../partials/footer'); -%> <%- include('../partials/scripts'); -%>
 </body>
